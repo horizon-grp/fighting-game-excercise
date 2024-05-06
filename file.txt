@@ -1,0 +1,35 @@
+## Write the algorithm of the Main function
+
+int main(){
+    currentFight = new Fight();
+
+    Player player = new Player(currentFight.choosePlayer("Player"));
+
+    Player opponent = new Player(currentFight.choosePlayer("Player"));
+
+    currentFight.startFight();
+
+    while(player.HP > 0 && opponent.HP > 0){
+        attack = player.attack();
+        defend = opponent.defend();
+
+        if( fight.correspond(attack, defend)){
+            opponent.reduceHP(attack);
+        }
+
+        attack = opponent.attack();
+        defend = player.defend();
+
+        if( fight.correspond(attack, defend)){
+            player.reduceHP(attack);
+        }
+    }
+
+    if(player.HP > 0){
+        printf("You won the Fight");
+    } else {
+        printf("You lose");
+    }
+
+    // Destroy the objects.
+}

@@ -22,7 +22,7 @@ sequenceDiagram
 
     Fight ->> Fight: Start fight
 
-    loop while player1 health > 0 || player2 > 0
+    loop while player1 health > 0 && player2 > 0
 
     Player1 ->> Fight: Attack
     Player2->> Fight: Defend
@@ -37,12 +37,10 @@ sequenceDiagram
     end
     end
 
-    alt if HP of player1 == 0
-    Fight ->> Player2: You win
-    Fight ->> Player1: You loose
-    else HP of player2 == 0
-    Fight ->> Player1: You win
-    Fight ->> Player2: You loose
+    alt if Player1 Health Points > 0
+    Fight ->> Player1aa: You Win
+    else
+    Fight ->> Player1: You Lose
     end
     
     destroy Player2
