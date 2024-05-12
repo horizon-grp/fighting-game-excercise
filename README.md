@@ -38,7 +38,7 @@ sequenceDiagram
     end
 
     alt if Player1 Health Points > 0
-    Fight ->> Player1aa: You Win
+    Fight ->> Player1: You Win
     else
     Fight ->> Player1: You Lose
     end
